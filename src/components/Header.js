@@ -4,8 +4,15 @@ import logo from "../assets/cat_logo.svg";
 
 const Header = () => {
   return (
-    <div>
-      <Navbar className="my-auto" color="secondary" dark fixed="top" id="nav2">
+    <div className="header">
+      <div className="links">
+      <Navbar
+        className="my-auto"
+        color="secondary"
+        dark
+        fixed="top"
+        id="navHeader"
+      >
         <NavbarBrand href="/">
           <img
             alt="logo"
@@ -14,17 +21,20 @@ const Header = () => {
               height: 90,
               width: 90,
             }}
-          />  
-         Cat Tinder 
+          />
+          Cat Tinder
         </NavbarBrand>
+
         
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/catindex">Index</NavLink>
-        <NavLink href="/catedit">Edit</NavLink>
-        <NavLink href="/catshow">Show</NavLink>
-        <NavLink href="/catnew">New</NavLink>
-        <NavLink href="/*">Not-Found</NavLink>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/catindex">Index</NavLink>
+          <NavLink href="/catedit">Edit</NavLink>
+          <NavLink href="/catshow">Show</NavLink>
+          <NavLink href="/catnew">New</NavLink>
+          <NavLink href="/*">Not-Found</NavLink>
+        
       </Navbar>
+      </div>
     </div>
   );
 };

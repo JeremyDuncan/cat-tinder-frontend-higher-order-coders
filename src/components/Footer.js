@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 const Footer = () => {
-
   return (
-    <Navbar className="my-auto" color="secondary" dark fixed="bottom" fill>
-     <h4>Created By: Goran and Jeremy &copy; 2022</h4>
+    <Navbar className="my-auto" color="secondary" dark fixed="bottom" fill transparent id="nav1">
+      <br />
+      <h4>Created By: Goran and Jeremy &copy; 2022</h4>
+      <br />
     </Navbar>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

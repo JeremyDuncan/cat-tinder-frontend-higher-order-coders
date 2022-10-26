@@ -5,16 +5,18 @@ import logo from "../assets/cat_logo.svg";
 const Header = () => {
   return (
     <div>
-      <Navbar className="my-2" color="secondary" dark>
+      <Navbar className="my-auto" color="secondary" dark fixed="top">
         <NavbarBrand href="/">
-        <img
+          <img
             alt="logo"
             src={logo}
             style={{
               height: 90,
               width: 90,
             }}
-          />Cat Tinder</NavbarBrand>
+          />
+          Cat Tinder
+        </NavbarBrand>
       </Navbar>
     </div>
   );

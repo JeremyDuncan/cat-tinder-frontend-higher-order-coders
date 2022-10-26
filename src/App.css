@@ -1,3 +1,12 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: rgb(193, 183, 183);
+}
+footer {
+  margin-top: 10rem;
 }

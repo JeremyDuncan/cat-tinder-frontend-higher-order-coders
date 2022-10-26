@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, NavbarBrand } from "reactstrap";
+import { Navbar, NavbarBrand, NavItem, NavLink } from "reactstrap";
 import logo from "../assets/cat_logo.svg";
 
 const Header = () => {
@@ -17,6 +17,12 @@ const Header = () => {
           />
           Cat Tinder
         </NavbarBrand>
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/catindex">Index</NavLink>
+        <NavLink href="/catedit">Edit</NavLink>
+        <NavLink href="/catshow">Show</NavLink>
+        <NavLink href="/catnew">New</NavLink>
+        <NavLink href="/*">Not-Found</NavLink>
       </Navbar>
     </div>
   );

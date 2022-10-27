@@ -1,42 +1,124 @@
-import React from "react";
-import { Navbar, NavbarBrand, NavItem, NavLink } from "reactstrap";
+// import React from "react";
+// import { Navbar, NavbarBrand, NavLink } from "reactstrap";
+// import logo from "../assets/cat_logo.svg";
+
+// const Header = () => {
+//   return (
+//     <div>
+//       <Navbar className="my-auto" dark fixed="top" sticky="top" id="navHeader">
+//         <NavbarBrand href="/">
+//           <img
+//             alt="logo"
+//             src={logo}
+//             style={
+//               {
+//                 // height: 90,
+//                 // width: 90,
+//               }
+//             }
+//           />
+//           Cat Tinder
+//         </NavbarBrand>
+//         <div className="linkContainer">
+//           <NavLink className="grow" href="/">
+//             Home
+//           </NavLink>
+//           <NavLink className="grow" href="/catindex">
+//             Index
+//           </NavLink>
+//           <NavLink className="grow" href="/catedit">
+//             Edit
+//           </NavLink>
+//           <NavLink className="grow" href="/catshow">
+//             Show
+//           </NavLink>
+//           <NavLink className="grow" href="/catnew">
+//             New
+//           </NavLink>
+//           <NavLink className="grow" href="/*">
+//             Not-Found
+//           </NavLink>
+//         </div>
+//       </Navbar>
+//     </div>
+//   );
+// };
+
+// ==============================================================================
+
+import React, { useState } from "react";
+import {
+  Collapse,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  NavItem,
+  NavLink
+} from "reactstrap";
 import logo from "../assets/cat_logo.svg";
 
-const Header = () => {
+function Header(props) {
+  const [collapsed, setCollapsed] = useState(true);
+
+  const toggleNavbar = () => setCollapsed(!collapsed);
+
   return (
-    <div className="header">
-      <div className="links">
-      <Navbar
-        className="my-auto"
-        color="secondary"
-        dark
-        fixed="top"
-        id="navHeader"
-      >
+    <div>
+      <Navbar>
         <NavbarBrand href="/">
-          <img
-            alt="logo"
-            src={logo}
-            style={{
-              height: 90,
-              width: 90,
-            }}
-          />
-          Cat Tinder
+          <img alt="logo" src={logo} />
+          <div className="pageTitle">Cat Tinder</div>
         </NavbarBrand>
 
-        
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/catindex">Index</NavLink>
-          <NavLink href="/catedit">Edit</NavLink>
-          <NavLink href="/catshow">Show</NavLink>
-          <NavLink href="/catnew">New</NavLink>
-          <NavLink href="/*">Not-Found</NavLink>
-        
+        <div className="toggler">
+          <NavbarToggler onClick={toggleNavbar} className="me-2" />
+        </div>
+
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            <div className="linkContainer">
+              <NavItem>
+                <NavLink className="grow" href="/">
+                  Home
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink className="grow" href="/catindex">
+                  Index
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink className="grow" href="/catedit">
+                  Edit
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink className="grow" href="/catshow">
+                  Show
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink className="grow" href="/catnew">
+                  New
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink className="grow" href="/*">
+                  Not-Found
+                </NavLink>
+              </NavItem>
+            </div>
+          </Nav>
+        </Collapse>
       </Navbar>
-      </div>
     </div>
   );
-};
+}
 
 export default Header;

@@ -6,9 +6,7 @@ describe("<Home/>", () => {
     const div = document.createElement("div");
     render(<Home />, div);
   });
-});
 
-describe("<Home />", () => {
   test("Renders the home page for the user", () => {
     render(<Home />);
     const element = screen.getByText(

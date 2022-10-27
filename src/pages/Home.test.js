@@ -13,5 +13,5 @@ describe("<Home/>", () => {
       "Welcome to Cat Tinder, the place where cats nip!"
     );
     expect(element).toBeInTheDocument();
-  });
+  });w
 });

@@ -16,8 +16,32 @@ function Header(props) {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
-      <Navbar>
+    <div className="header">
+      <Navbar className="desktop" fixed="top">
+        <NavbarBrand href="/">
+          <img alt="logo" src={logo} />
+          <div className="pageTitle">Cat Tinder</div>
+        </NavbarBrand>
+        <div className="linkContainer">
+          <NavLink className="grow" href="/">
+            Home
+          </NavLink>
+          <NavLink className="grow" href="/catindex">
+            Index
+          </NavLink>
+          <NavLink className="grow" href="/catedit">
+            Edit
+          </NavLink>
+          <NavLink className="grow" href="/catnew">
+            New
+          </NavLink>
+          <NavLink className="grow" href="/*">
+            Not-Found
+          </NavLink>
+        </div>
+      </Navbar>
+
+      <Navbar className="mobile"  fixed="top">
         <NavbarBrand href="/">
           <img alt="logo" src={logo} />
           <div className="pageTitle">Cat Tinder</div>
@@ -29,43 +53,37 @@ function Header(props) {
 
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
-            <div className="linkContainer">
+              
               <NavItem>
-                <NavLink className="grow" href="/">
+                <NavLink className="grow mobileLinks" href="/">
                   Home
                 </NavLink>
               </NavItem>
 
               <NavItem>
-                <NavLink className="grow" href="/catindex">
+                <NavLink className="grow mobileLinks" href="/catindex">
                   Index
                 </NavLink>
               </NavItem>
 
               <NavItem>
-                <NavLink className="grow" href="/catedit">
+                <NavLink className="grow mobileLinks" href="/catedit">
                   Edit
                 </NavLink>
               </NavItem>
 
               <NavItem>
-                <NavLink className="grow" href="/catshow">
-                  Show
-                </NavLink>
-              </NavItem>
-
-              <NavItem>
-                <NavLink className="grow" href="/catnew">
+                <NavLink className="grow mobileLinks" href="/catnew">
                   New
                 </NavLink>
               </NavItem>
-
+             
               <NavItem>
-                <NavLink className="grow" href="/*">
+                <NavLink className="grow mobileLinks" href="/*">
                   Not-Found
                 </NavLink>
               </NavItem>
-            </div>
+             
           </Nav>
         </Collapse>
       </Navbar>

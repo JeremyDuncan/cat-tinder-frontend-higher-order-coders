@@ -9,30 +9,45 @@
 }
 
 body {
-  background-color: rgb(193, 183, 183);
+  background-color: rgb(169, 144, 144);
 }
 
 /* ======================== HEADER / LINK  SECTION ========================== */
+
+.header {
+  margin-bottom: 130px;
+}
+
+.mobileLinks {
+  color: rgb(190, 183, 183);
+  text-shadow: 2px 2px 4px rgb(11, 11, 11);
+}
 
 /* == Cat Logo expandable header == */
 #root>div:nth-child(1)>nav>div>a>img {
   padding: 0px;
   width: 180px;
-  height: 120px;
-  margin-top: -10px;
+  height: 90px;
+  margin-top: -16px;
   margin-bottom: -20px;
+  
 }
 
 /* New Header  expandable header */
 .pageTitle {
   font-family: 'Lobster Two', cursive;
   color: rgb(239, 121, 121);
-  font-size: 3.3rem;
+  font-size: 2.8rem;
+  margin-top: -17px;
   text-shadow: 2px 2px 4px black;
+  
 }
 
 #root > div:nth-child(1) > nav > div > a {
   display: flex;
+  height: 70px;
+  
+  
 }
 
 /* Header Bar */
@@ -47,6 +62,7 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 2px 2px 17px black;
+
 }
 
 /* Expandable Header Option */
@@ -57,12 +73,26 @@ body {
   background: -webkit-linear-gradient(top, #911500 0%, #A10808 50%, #820000 100%);
   background: linear-gradient(to bottom, #911500 0%, #A10808 50%, #820000 100%);
   box-shadow: 2px 2px 17px black;
+  border-bottom: 3px solid rgb(108, 28, 28);
+}
+
+.linkContainer {
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+  margin: auto;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: rgb(190, 183, 183);
+  text-shadow: 2px 2px 4px rgb(11, 11, 11);
 }
 
 .links {
   display: flex;
   justify-content: space-between;
   margin: auto;
+
+
 }
 
 #navHeader>div {
@@ -70,6 +100,7 @@ body {
   color: rgb(229, 221, 221);
   font-weight: bold;
   text-shadow: 2px 2px 4px black;
+  
 }
 
 /* ======================== END HEADER / LINK  SECTION ====================== */
@@ -91,12 +122,18 @@ body {
 }
  .card {
   box-shadow: 4px 8px 17px black;
-
+  height: 500px;
+  width: 18rem;
   border-radius: 10px;
+  display: flex;
+  padding: 5px;
+  background-color: rgb(198, 109, 109);
+  border: 2px solid rgb(155, 99, 99);
  }
  
  .cardImage {
   border-radius: 10px 10px 0px 0px;
+  height: 250px;
  }
 
  .subtitle {
@@ -111,13 +148,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
+  height: 200px;
 
-
-.seperate {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .btn {
@@ -166,6 +198,7 @@ body {
   text-align: center;
   box-shadow: 4px 8px 17px black;
   color: rgb(229, 221, 221);
+  border-top: 3px solid rgb(108, 28, 28);
 }
 
 .image {
@@ -176,7 +209,7 @@ body {
 /* Centers Footer Text */
 .container-fluid>h4 {
   margin: auto;
-  color: rgb(239, 121, 121);
+  color: rgb(190, 183, 183);
 }
 /* =========================== END FOOTER SECTION =========================== */
 
@@ -210,8 +243,16 @@ body {
 /* =====================  END REACTIVE SECTION ============================== */
 
 /* ===================== Responsive CSS Styles ============================== */
-/* === Responsive Phone Size === */
-@media (max-width: 550px) {
+/* === Responsive Phone Size ==================================== */
+@media (max-width: 729px) {
+        /* 629 */
+  /* Removes Desktop Header */
+  .desktop {
+    display: none;
+  }
+  .header {
+    margin-bottom: 90px;
+  }
 
   /* LOGO */
   #root>div:nth-child(1)>nav>div>a>img {
@@ -247,5 +288,13 @@ body {
   .toggler {
     width: 30px;
     margin-right: 35px
+  }
+}
+
+ /* Desktop Responsive Section================================== */
+ /* Removes App Bar when screen gets larger */
+@media (min-width: 730px) {
+  .mobile {
+    display: none;
   }
 }

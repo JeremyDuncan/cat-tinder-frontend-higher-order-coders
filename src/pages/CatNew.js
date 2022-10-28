@@ -4,7 +4,7 @@ const CatNew = () => {
 
   return (
     <div>
-      <h1>CatNew</h1>
+      <h1>Cat New</h1>
     </div>
   )
 }

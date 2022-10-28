@@ -4,7 +4,7 @@ const CatEdit = () => {
 
   return (
     <div>
-      <h1>CatEdit</h1>
+      <h1>Cat Edit</h1>
     </div>
   )
 }

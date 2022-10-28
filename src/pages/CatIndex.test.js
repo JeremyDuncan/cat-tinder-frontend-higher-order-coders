@@ -1,5 +1,4 @@
 import { render, renderWithContext, screen } from "@testing-library/react";
-import CatCards from "../components/CatCards";
 import mockCats from "../mockCats";
 import CatIndex from "./CatIndex";
 
@@ -19,11 +18,17 @@ describe("<CatIndex/>", () => {
     expect(element).toBeInTheDocument();
   });
 
-  test("Renders the Cat Cards", () => {
-      mockCats.forEach(cat => {
-        const catName = screen.getByText(cat.name);
-        screen.debug(catName);
-        expect(catName).toBeInTheDocument()
-      })
-  });
+
+  it("renders cat cards", () => {
+    const div = document.createElement("div")
+    render(<CatIndex cats={mockCats} />, div)
+  
+    mockCats.forEach((cat) => {
+      const catName = screen.getByText(cat.enjoys)
+      screen.debug(catName);
+      screen.debug(catName);  
+      expect(catName).toBeInTheDocument()
+    })
+  })
+
 });

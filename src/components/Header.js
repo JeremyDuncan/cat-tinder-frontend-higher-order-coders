@@ -27,17 +27,12 @@ function Header(props) {
             Home
           </NavLink>
           <NavLink className="grow" href="/catindex">
-            Index
-          </NavLink>
-          <NavLink className="grow" href="/catedit">
-            Edit
+          Available Cats
           </NavLink>
           <NavLink className="grow" href="/catnew">
-            New
+          Add Cat
           </NavLink>
-          <NavLink className="grow" href="/*">
-            Not-Found
-          </NavLink>
+
         </div>
       </Navbar>
 
@@ -62,27 +57,17 @@ function Header(props) {
 
               <NavItem>
                 <NavLink className="grow mobileLinks" href="/catindex">
-                  Index
+                  Available Cats
                 </NavLink>
               </NavItem>
 
-              <NavItem>
-                <NavLink className="grow mobileLinks" href="/catedit">
-                  Edit
-                </NavLink>
-              </NavItem>
 
               <NavItem>
                 <NavLink className="grow mobileLinks" href="/catnew">
-                  New
+                  Add Cat
                 </NavLink>
               </NavItem>
-             
-              <NavItem>
-                <NavLink className="grow mobileLinks" href="/*">
-                  Not-Found
-                </NavLink>
-              </NavItem>
+  
              
           </Nav>
         </Collapse>

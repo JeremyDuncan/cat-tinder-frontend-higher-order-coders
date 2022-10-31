@@ -1,11 +1,17 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Button, Card, CardBody, CardSubtitle, CardTitle } from "reactstrap";
 
-const CatShow = ({ cats }) => {
+const CatShow = ({ cats, deleteCat }) => {
   const { id } = useParams();
   let catShow = cats?.find((cat) => cat.id === +id);
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    deleteCat(catShow?.id);
+    navigate("/catindex");
+  };
   return (
     <div>
       <h1>Cat Show</h1>
@@ -15,22 +21,26 @@ const CatShow = ({ cats }) => {
           <img className="cardImage" alt="Sample" src={catShow?.image} />
           <CardBody className="description">
             <CardTitle tag="h2">
-              {catShow?.name}, {catShow?.age}
+              {catShow?.name}
+              <br />
+              {catShow?.age} Years Old
             </CardTitle>
             <CardSubtitle className="subtitle" tag="h6">
               {catShow?.enjoys}
+              
             </CardSubtitle>
-            <Button href={`/catshow/${catShow?.id}`}>Prrrrr?</Button>
           </CardBody>
+          
         </Card>
         {/* === CAT CARD END ===  */}
       </div>
-      {/*       
-      {showCat.name}
-      {showCat.age}
-      <img src={showCat.image} /> */}
+      <div className="catButtons">
+        <Button href={`/catedit/${catShow?.id}`}>Edit Cat Profile</Button>
+        <Button onClick={handleClick}>Delete Cat Profile</Button>
+      </div>
     </div>
   );
 };
 
 export default CatShow;
+// href={`/catedit/${catShow.id}`}

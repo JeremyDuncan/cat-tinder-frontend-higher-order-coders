@@ -68,6 +68,7 @@ const CatNew = ({createCat}) => {
       <Button onClick={handleSubmit} name="submit">
         Submit Cat
       </Button>
+      
     </div>
   );
 };

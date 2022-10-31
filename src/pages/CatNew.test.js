@@ -1,4 +1,4 @@
-import { render, renderWithContext, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import mockCats from "../mockCats";
 import CatNew from "./CatNew";
@@ -17,7 +17,6 @@ describe("<CatNew />", () => {
     expect(catNewHeading).toHaveTextContent("Cat New")
   });
 
-
   test("Has a form with entries for the name, age, enjoys, and image", () => {
     const nameLabel = screen.getByText(/cat name/i)
     expect(nameLabel.getAttribute("For")).toEqual("cat name")
@@ -33,4 +32,4 @@ describe("<CatNew />", () => {
 
   });
 
-});
+});q

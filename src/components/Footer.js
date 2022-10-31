@@ -8,8 +8,6 @@ const Footer = () => {
       color="secondary"
       dark
       fixed="bottom"
-      fill
-      transparent
       id="navFooter"
     >
       <h4>Created By: Goran and Jeremy &copy; 2022</h4>

@@ -25,7 +25,7 @@ const CatNew = ({createCat}) => {
       <h1>Cat New</h1>
 
       <FormGroup>
-        <Label for="name">Cat Name</Label>
+        <Label for="cat name">Cat Name</Label>
         <Input
           type="text"
           name="name"
@@ -35,7 +35,7 @@ const CatNew = ({createCat}) => {
         />
         </FormGroup>
         <FormGroup>
-        <Label for="name">Cat Age</Label>
+        <Label for="cat age">Cat Age</Label>
         <Input
           type="text"
           name="age"
@@ -45,7 +45,7 @@ const CatNew = ({createCat}) => {
         />
         </FormGroup>
          <FormGroup>
-        <Label for="name">Cat Enjoys</Label>
+        <Label for="cat enjoys">Cat Enjoys</Label>
         <Input
           type="text"
           name="enjoys"
@@ -55,7 +55,7 @@ const CatNew = ({createCat}) => {
         />
         </FormGroup>
          <FormGroup>
-        <Label for="name">Cat Image URL</Label>
+        <Label for="cat image">Cat Image URL</Label>
         <Input
           type="text"
           name="image"

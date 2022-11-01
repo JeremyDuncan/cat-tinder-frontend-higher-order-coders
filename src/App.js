@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect(() => {
     readCat();
-  }, [cats]);
+  }, []);
 
   const readCat = () => {
     fetch("http://localhost:3000/cats")
@@ -38,10 +38,8 @@ const App = () => {
       method: "POST",
     })
       .then((response) => response.json())
-      .then((payload) => this.readCat())
+      .then(() => readCat())
       .catch((errors) => console.log("Cat create errors:", errors));
-
-    console.log(cat);
   };
 
   const updateCat = (cat, id) => {
@@ -55,8 +53,10 @@ const App = () => {
       // HTTP verb so the correct endpoint is invoked on the server
       method: "PATCH",
     })
-      .then((response) => response.json())
-      .then((payload) => this.readCat())
+      .then((response) => {
+        response.json();
+      })
+      .then(() => readCat())
       .catch((errors) => console.log("Cat update errors:", errors));
   };
 
@@ -68,7 +68,7 @@ const App = () => {
       method: "DELETE",
     })
       .then((response) => response.json())
-      .then((payload) => this.readCat())
+      .then(() => readCat())
       .catch((errors) => console.log("delete errors:", errors));
   };
 
@@ -78,7 +78,10 @@ const App = () => {
       <div className="App">
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/catindex" element={<CatIndex cats={cats} />} />
+          <Route
+            path="/catindex"
+            element={<CatIndex cats={cats} readCat={readCat} />}
+          />
           <Route
             path="/catshow/:id"
             element={<CatShow cats={cats} deleteCat={deleteCat} />}

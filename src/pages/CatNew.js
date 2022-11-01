@@ -19,8 +19,17 @@ const CatNew = ({ createCat }) => {
     setNewCat({ ...newCat, [e.target.name]: e.target.value });
   };
   const handleSubmit = () => {
-    createCat(newCat);
-    navigate("/catindex");
+    if (
+      newCat.name === "" ||
+      newCat.age === "" ||
+      newCat.enjoys === "" ||
+      newCat.image === ""
+    )
+      return;
+    else {
+      createCat(newCat);
+      navigate("/catindex");
+    }
   };
 
   return (
@@ -41,6 +50,8 @@ const CatNew = ({ createCat }) => {
                 onChange={handleChange}
                 placeholder="Enter the cat's name"
                 value={newCat.name}
+                autoFocus
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -52,6 +63,7 @@ const CatNew = ({ createCat }) => {
                 onChange={handleChange}
                 placeholder="Enter the cat's age"
                 value={newCat.age}
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -63,6 +75,7 @@ const CatNew = ({ createCat }) => {
                 onChange={handleChange}
                 placeholder="Enter what the cat enjoys"
                 value={newCat.enjoys}
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -74,6 +87,7 @@ const CatNew = ({ createCat }) => {
                 onChange={handleChange}
                 placeholder="Enter a cat image URL"
                 value={newCat.image}
+                required
               />
             </FormGroup>
           </Form>

@@ -256,14 +256,24 @@ h2 {
 
 .btnSep {
   display: flex;
-  justify-content: space-between;
+  position: relative;
+  justify-content: center;
   align-items: center;
+  text-align: left;
+}
+
+.btnForm {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
 }
 
 .btn:hover {
-  color: rgb(239, 121, 121);
+  background: rgb(239, 121, 121);
+  color: rgb(60, 55, 55);
   font-weight: bold;
-  background: #2e0902;
 }
 
 .btn-secondary:active {
@@ -363,6 +373,7 @@ h2 {
 
 .but:before,
 .but:after {
+  display: flex;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -378,6 +389,7 @@ h2 {
   font-size: 2rem;
   align-items: center;
   justify-content: center;
+  justify-content: space-around;
 }
 
 .but:before {
@@ -399,11 +411,12 @@ h2 {
 }
 
 .arrow {
-  background: #FE5F55;
+  background: #911500;
 }
 
 .arrow:hover {
-  background: #fe2f22;
+  background: rgb(239, 121, 121);
+  color: rgb(60, 55, 55);
 }
 
 .arrow:active,
@@ -420,16 +433,215 @@ h2 {
   animation: bounceright 0.3s alternate ease infinite;
 }
 
+
+/* ================================================================ */
+
+.select {
+  background: #911500;
+}
+
+.select:hover {
+  background: rgb(239, 121, 121);
+  color: rgb(60, 55, 55);
+}
+
+.select:active,
+.select:focus {
+  background: #b90c01;
+}
+
+.select:after {
+  content: "\f6be";
+}
+
+.select:hover:after {
+  -webkit-animation: bounceUp 0.3s alternate ease infinite;
+  animation: bounceUp 0.3s alternate ease infinite;
+}
+
+/* =======Thumbs Down Button============== */
+.thumbsDownButton {
+  display: inline-block;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.thumbsDownButton:before,
+.thumbsDownButton:after {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: inherit;
+  padding-bottom: inherit;
+  width: 2.8em;
+  font-family: 'FontAwesome';
+  font-size: 1.2em;
+  text-align: center;
+  transition: 0.2s;
+  transform-origin: 50% 60%;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.thumbsDownButton:before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.thumbsDownButton:hover {
+  background: #0079a5;
+}
+
+.thumbsDownButton:active,
+.thumbsDownButton:focus {
+  background: #002e3f;
+  outline: none;
+}
+
+.thumbsDownButton {
+  min-width: 10em;
+}
+
+/* ============================ */
+.thumbsDown {
+  background: #911500;
+}
+
+.thumbsDown:hover {
+  background: rgb(239, 121, 121);
+  color: rgb(60, 55, 55);
+}
+
+.thumbsDown:active,
+.thumbsDown:focus {
+  background: #b90c01;
+}
+
+.thumbsDown:after {
+  content: "\f165";
+}
+
+.thumbsDown:hover:after {
+  -webkit-animation: bounceDown 0.3s alternate ease infinite;
+  animation: bounceDown 0.3s alternate ease infinite;
+}
+
+/* =======Thumbs Down Button============== */
+.thumbsUpButton {
+  display: inline-block;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.thumbsUpButton:before,
+.thumbsUpButton:after {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: inherit;
+  padding-bottom: inherit;
+  width: 2.8em;
+  font-family: 'FontAwesome';
+  font-size: 1.2em;
+  text-align: center;
+  transition: 0.2s;
+  transform-origin: 50% 60%;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.thumbsUpButton:before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.thumbsUpButton:hover {
+  background: #0079a5;
+}
+
+.thumbsUpButton:active,
+.thumbsUpButton:focus {
+  background: #002e3f;
+  outline: none;
+}
+
+.thumbsUpButton {
+  min-width: 10em;
+}
+
+/* ============================ */
+.thumbsUp {
+  background: #911500;
+}
+
+.thumbsUp:hover {
+  background: rgb(239, 121, 121);
+  color: rgb(60, 55, 55);
+}
+
+.thumbsUp:active,
+.thumbsUp:focus {
+  background: #b90c01;
+}
+
+.thumbsUp:after {
+  content: "\f164";
+}
+
+.thumbsUp:hover:after {
+  -webkit-animation: thumbsUp 0.3s alternate ease infinite;
+  animation: thumbsUp 0.3s alternate ease infinite;
+}
+
+
 @keyframes bounceright {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(3px);
   }
 }
 
+
+@keyframes bounceUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-6px);
+  }
+}
+
+
+@keyframes bounceDown {
+  from {
+    transform: translateY(3);
+  }
+  to {
+    transform: translateY(6px);
+  }
+}
+
+
+@keyframes thumbsUp {
+  from {
+    transform: translateY(3);
+  }
+  to {
+    transform: translateY(-6px);
+  }
+}
 /* =====================  END REACTIVE SECTION ============================== */
 /* 
 ##
@@ -515,15 +727,40 @@ h2 {
     justify-content: center;
   }
 
+  /* .thumbsDown {
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+  } */
+
+
+  .thumbsUpButton {
+    text-align: right;
+    min-width: 8.2em;
+    font-size: 1rem;
+  }
+  .thumbsDownButton {
+
+
+    min-width: 8.2em;
+    font-size: 1rem;
+  }
   .submitButton {
     display: flex;
-    margin-bottom: 110px;
-    justify-content: center;
+   
   }
-
   .index {
     margin-bottom: 100px;
   }
+
+  .#root > div.App > div > div.submitButton > a {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+
+
+  }
+
 
 }
 

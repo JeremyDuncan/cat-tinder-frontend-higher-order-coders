@@ -4,6 +4,7 @@ import { Button, Card, CardBody, CardTitle } from "reactstrap";
 const CatIndex = ({ cats }) => {
   return (
     <div className="index">
+      {console.log(cats)}
       <h1>Available Cats</h1>
       <br />
       <div className="cardCollection">
@@ -15,11 +16,12 @@ const CatIndex = ({ cats }) => {
                 <img className="cardImage" alt="Sample" src={cat.image} />
                 <CardBody className="description">
                   <CardTitle tag="h1">{cat.name}</CardTitle>
-                  <div className="shrink but arrow">
-                    <Button className="btnSep" href={`/catshow/${cat.id}`}>
-                      View {cat.name}
-                    </Button>
-                  </div>
+                  <Button
+                    className="btnSep but arrow"
+                    href={`/catshow/${cat.id}`}
+                  >
+                    View {cat.name}
+                  </Button>
                 </CardBody>
               </Card>
               {/* === CAT CARD END ===  */}

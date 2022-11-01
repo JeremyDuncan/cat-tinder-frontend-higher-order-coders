@@ -1,3 +1,6 @@
+import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { React, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
@@ -19,51 +22,77 @@ const CatEdit = ({ cats, updateCat }) => {
     updateCat(editCat, currentCat.id);
     navigate("/catindex");
   };
-  
+
   const handleChange = (e) => {
     setEditCat({ ...editCat, [e.target.name]: e.target.value });
   };
 
   return (
     <div>
-      <h1>Cat Edit</h1>
+      <h1>Edit Cat Profile</h1>
+      <br />
       <div className="catForm">
-      <Form>
-        <FormGroup>
-          <Label for="name">Name</Label>
-          <Input
-            type="text"
-            name="name"
-            onChange={handleChange}
-            defaultValue={currentCat?.name}
-          />
-          <Label for="name">Age</Label>
-          <Input
-            type="text"
-            name="age"
-            onChange={handleChange}
-            defaultValue={currentCat?.age}
-          />
-          <Label for="name">Enjoys</Label>
-          <Input
-            type="text"
-            name="enjoys"
-            onChange={handleChange}
-            defaultValue={currentCat?.enjoys}
-          />
-          <Label for="name">Image</Label>
-          <Input
-            type="text"
-            name="image"
-            onChange={handleChange}
-            defaultValue={currentCat?.image}
-          />
-        </FormGroup>
-      </Form>
+        <Form>
+          <FormGroup>
+            <div className="formSection">
+              <Label className="formLabel" for="name">
+                Name:
+              </Label>
+              <Input
+                className="formInput"
+                type="text"
+                name="name"
+                onChange={handleChange}
+                defaultValue={currentCat?.name}
+              />
+            </div>
+            <div className="formSection">
+              <Label className="formLabel" for="name">
+                Age:
+              </Label>
+              <Input
+                className="formInput"
+                type="text"
+                name="age"
+                onChange={handleChange}
+                defaultValue={currentCat?.age}
+              />
+            </div>
+            <div className="formSection">
+              <Label className="formLabel" for="name">
+                Enjoys:
+              </Label>
+              <Input
+                className="formInput"
+                type="text"
+                name="enjoys"
+                onChange={handleChange}
+                defaultValue={currentCat?.enjoys}
+              />
+            </div>
+            <div className="formSection">
+              <Label className="formLabel" for="name">
+                Image URL:
+              </Label>
+              <Input
+                className="formInput"
+                type="text"
+                name="image"
+                onChange={handleChange}
+                defaultValue={currentCat?.image}
+              />
+            </div>
+          </FormGroup>
+        </Form>
       </div>
-      <Button onClick={handleSubmit} name="submit">
-        Submit Updated Cat
-      </Button>
+      <div className="submitButton">
+        <Button onClick={handleSubmit} name="submit">
+          <FontAwesomeIcon icon={faThumbsUp} /> Submit Updated Cat
+        </Button>
+        <Button href="/catindex">
+          <FontAwesomeIcon icon={faThumbsDown} /> Cancel
+        </Button>
+      </div>
     </div>
   );
 };

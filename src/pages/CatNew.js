@@ -1,3 +1,6 @@
+import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
@@ -21,54 +24,69 @@ const CatNew = ({ createCat }) => {
   };
 
   return (
-    <div >
+    <div>
       <h1>Add Your Cat</h1>
-      <div className="catForm">
-        <FormGroup>
-          <Label for="cat name">Cat Name</Label>
-          <Input
-            type="text"
-            name="name"
-            onChange={handleChange}
-            placeholder="Enter the cat's name"
-            value={newCat.name}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="cat age">Cat Age</Label>
-          <Input
-            type="text"
-            name="age"
-            onChange={handleChange}
-            placeholder="Enter the cat's age"
-            value={newCat.age}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="cat enjoys">Cat Enjoys</Label>
-          <Input
-            type="text"
-            name="enjoys"
-            onChange={handleChange}
-            placeholder="Enter what the cat enjoys"
-            value={newCat.enjoys}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="cat image">Cat Image URL</Label>
-          <Input
-            type="text"
-            name="image"
-            onChange={handleChange}
-            placeholder="Enter a cat image URL"
-            value={newCat.image}
-          />
-        </FormGroup>
+      <br />
+      <div className="formContainer">
+        <div className="catForm">
+          <Form>
+            <FormGroup>
+              <Label className="formLabel" for="cat name">
+                Name:
+              </Label>
+              <Input
+                className="formInput"
+                type="text"
+                name="name"
+                onChange={handleChange}
+                placeholder="Enter the cat's name"
+                value={newCat.name}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="cat age">Age:</Label>
+              <Input
+                className="formInput"
+                type="text"
+                name="age"
+                onChange={handleChange}
+                placeholder="Enter the cat's age"
+                value={newCat.age}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="cat enjoys">Enjoys:</Label>
+              <Input
+                className="formInput"
+                type="text"
+                name="enjoys"
+                onChange={handleChange}
+                placeholder="Enter what the cat enjoys"
+                value={newCat.enjoys}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="cat image">Image URL:</Label>
+              <Input
+                className="formInput"
+                type="text"
+                name="image"
+                onChange={handleChange}
+                placeholder="Enter a cat image URL"
+                value={newCat.image}
+              />
+            </FormGroup>
+          </Form>
+        </div>
+        <div className="submitButton">
+          <Button onClick={handleSubmit} name="submit">
+            <FontAwesomeIcon icon={faThumbsUp} /> Submit Cat
+          </Button>
+          <Button href="/catindex">
+            <FontAwesomeIcon icon={faThumbsDown} /> Cancel
+          </Button>
+        </div>
       </div>
-      
-      <Button onClick={handleSubmit} name="submit">
-        Submit Cat
-      </Button>
     </div>
   );
 };

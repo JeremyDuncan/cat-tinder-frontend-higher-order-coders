@@ -1,3 +1,6 @@
+import { faPenToSquare, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Card, CardBody, CardSubtitle, CardTitle } from "reactstrap";
@@ -14,29 +17,30 @@ const CatShow = ({ cats, deleteCat }) => {
   };
   return (
     <div>
-      <h1>Cat Show</h1>
+      <h1>Say Hello To {catShow?.name}</h1>
+      <br />
       <div className="cardCollection">
         {/* === CAT CARD START === */}
         <Card className="card">
           <img className="cardImage" alt="Sample" src={catShow?.image} />
           <CardBody className="description">
-            <CardTitle tag="h2">
-              {catShow?.name}
-              <br />
-              {catShow?.age} Years Old
-            </CardTitle>
+            <CardTitle tag="h1">{catShow?.name}</CardTitle>
             <CardSubtitle className="subtitle" tag="h6">
+              <h5>{catShow?.age} Years Old</h5>
+              <h5>Enjoys:</h5>
               {catShow?.enjoys}
-              
             </CardSubtitle>
           </CardBody>
-          
         </Card>
         {/* === CAT CARD END ===  */}
       </div>
       <div className="catButtons">
-        <Button href={`/catedit/${catShow?.id}`}>Edit Cat Profile</Button>
-        <Button onClick={handleClick}>Delete Cat Profile</Button>
+        <Button href={`/catedit/${catShow?.id}`}>
+          <FontAwesomeIcon icon={faPenToSquare} /> Edit Cat Profile
+        </Button>
+        <Button onClick={handleClick}>
+          <FontAwesomeIcon icon={faTrashCan} /> Delete Cat Profile
+        </Button>
       </div>
     </div>
   );

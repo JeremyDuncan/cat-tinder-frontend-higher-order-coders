@@ -18,8 +18,8 @@ const Home = () => {
         </div>
       </div>
       <div className="catButtons">
-        <Button href="/catindex">See Available Cats!</Button>
-        <Button href="/catnew">Add Your Own Cat!</Button>
+        <Button className="btnSep but select" href="/catindex">See Available Cats!</Button>
+        <Button className="btnSep but select" href="/catnew">Add Your Own Cat!</Button>
       </div>
     </div>
   );

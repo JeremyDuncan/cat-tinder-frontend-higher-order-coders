@@ -1,6 +1,3 @@
-import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
@@ -93,13 +90,14 @@ const CatNew = ({ createCat }) => {
           </Form>
         </div>
         <div className="submitButton">
-          <Button onClick={handleSubmit} name="submit">
-            <FontAwesomeIcon icon={faThumbsUp} /> Submit Cat
-          </Button>
-          <Button href="/catindex">
-            <FontAwesomeIcon icon={faThumbsDown} /> Cancel
-          </Button>
-        </div>
+        <Button className="btnForm thumbsUpButton thumbsUp" onClick={handleSubmit} name="submit">
+          Submit
+        </Button>
+        <Button className="btnForm thumbsDownButton thumbsDown" href="/catindex">
+           Cancel
+        </Button>
+      </div>
+
       </div>
     </div>
   );

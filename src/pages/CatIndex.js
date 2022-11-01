@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card, CardBody, CardTitle } from "reactstrap";
 
-const CatIndex = ({ cats }) => {
+const CatIndex = ({ cats, readCat }) => {
   return (
     <div className="index">
       <h1>Available Cats</h1>

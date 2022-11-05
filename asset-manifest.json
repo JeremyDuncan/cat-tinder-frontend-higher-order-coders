@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/cat-tinder-frontend/static/css/main.a328ba0b.css",
+    "main.js": "/cat-tinder-frontend/static/js/main.390197c5.js",
+    "static/media/cat_home_4.webp": "/cat-tinder-frontend/static/media/cat_home_4.b8021cc34e526deb4953.webp",
+    "static/media/404_cat.jpeg": "/cat-tinder-frontend/static/media/404_cat.a7dab9a0ec2567e99260.jpeg",
+    "static/media/cat_readme_pic.webp": "/cat-tinder-frontend/static/media/cat_readme_pic.5689fa64b14676d95302.webp",
+    "static/media/cat_home_6.webp": "/cat-tinder-frontend/static/media/cat_home_6.059af322b4aab378edad.webp",
+    "static/media/cat_logo.svg": "/cat-tinder-frontend/static/media/cat_logo.e8c335ce06e92fd3aceb7ea866028adb.svg",
+    "static/media/background_cat1.webp": "/cat-tinder-frontend/static/media/background_cat1.0d159ac5da98e06123c7.webp",
+    "index.html": "/cat-tinder-frontend/index.html",
+    "main.a328ba0b.css.map": "/cat-tinder-frontend/static/css/main.a328ba0b.css.map",
+    "main.390197c5.js.map": "/cat-tinder-frontend/static/js/main.390197c5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a328ba0b.css",
+    "static/js/main.390197c5.js"
+  ]
+}

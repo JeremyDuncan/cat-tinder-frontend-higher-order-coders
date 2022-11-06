@@ -7,7 +7,7 @@ const CatIndex = ({ cats, readCat }) => {
       {console.log(cats)}
       <h1>Available Cats</h1>
       <br />
-      <div className="cardCollection">
+      <div className="cardCollection loader">
         {cats.map((cat, index) => {
           return (
             <div index={index} cat={cat} key={index}>

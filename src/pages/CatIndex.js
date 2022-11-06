@@ -10,7 +10,7 @@ const CatIndex = ({ cats, readCat, loaded }) => {
       {cats.length === 0 && (
         <>
         <h2 className="loadMessage">LOADING PLEASE WAIT</h2>
-        <h4>Server Booting up</h4>
+        <h4>Server Booting Up</h4>
         </>
       )}
       {cats.length !== 0 && (

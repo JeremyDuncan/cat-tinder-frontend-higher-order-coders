@@ -49,7 +49,9 @@ h2 {
     transform: rotate(360deg);
   }
 }
-
+.loadMessage {
+  margin-top: 80px;
+}
 /* ======================== END LOADING Section ============================= */
 /* 
 ##

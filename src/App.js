@@ -12,7 +12,7 @@ import NotFound from "./pages/NotFound";
 
 const App = () => {
   const [cats, setCats] = useState([]);
-
+  
   useEffect(() => {
     readCat();
   }, []);
@@ -80,7 +80,7 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route
             path="/catindex"
-            element={<CatIndex cats={cats} readCat={readCat} />}
+            element={<CatIndex cats={cats} readCat={readCat}/>}
           />
           <Route
             path="/catshow/:id"

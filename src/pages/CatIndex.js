@@ -1,11 +1,21 @@
 import React from "react";
 import { Button, Card, CardBody, CardTitle } from "reactstrap";
 
-const CatIndex = ({ cats, readCat }) => {
+const CatIndex = ({ cats, readCat, loaded }) => {
+
   return (
     <div className="index">
-      {console.log(cats)}
+      {console.log(cats.length)}
+      
+      {cats.length === 0 && (
+        <>
+        <h2 className="loadMessage">LOADING PLEASE WAIT</h2>
+        <h4>Server Booting up</h4>
+        </>
+      )}
+      {cats.length !== 0 && (
       <h1>Available Cats</h1>
+      )}
       <br />
       <div className="cardCollection loader">
         {cats.map((cat, index) => {

@@ -8,7 +8,11 @@
   font-family: 'Roboto', sans-serif;
   color: rgb(82, 11, 11);
 }
-
+ a {
+  text-decoration: none;
+  color: white;
+  }
+  
 body {
   background-color: rgb(169, 144, 144);
   background-image: url('./assets/background_cat1.webp');
@@ -322,6 +326,9 @@ h2 {
   color: rgb(190, 183, 183);
 }
 
+#navFooter > div > h4 {
+  font-size: 1rem;
+}
 /* =========================== END FOOTER SECTION =========================== */
 /* 
 ##
@@ -748,14 +755,15 @@ h2 {
     margin-bottom: 100px;
   }
 
-  .#root > div.App > div > div.submitButton > a {
+  .root > div.App > div > div.submitButton > a {
     display: flex;
     font-size: 2rem;
     justify-content: center;
-
-
   }
 
+  #navFooter > div > h4 {
+    font-size: .6rem;
+  }
 
 }
 

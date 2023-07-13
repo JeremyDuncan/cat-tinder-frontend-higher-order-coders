@@ -1,5 +1,6 @@
 {
-  "name": "cat-tinder-frontend",
+  "homepage": "https://jeremyduncan.github.io/cat-tinder-frontend-higher-order-coders",
+  "name": "cat-tinder-frontend-higher-order-coders",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +11,7 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "bootstrap": "^5.2.2",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "jest-dom": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,6 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "gh-pages -b master -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

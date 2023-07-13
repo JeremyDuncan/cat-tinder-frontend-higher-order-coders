@@ -1,6 +1,6 @@
 {
   "homepage": "https://jeremyduncan.github.io/cat-tinder-frontend-higher-order-coders",
-  "name": "cat-tinder-frontend-higher-order-coders",
+  "name": "cat-tinder-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

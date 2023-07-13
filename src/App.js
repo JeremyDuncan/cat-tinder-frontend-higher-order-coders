@@ -12,13 +12,13 @@ import NotFound from "./pages/NotFound";
 
 const App = () => {
   const [cats, setCats] = useState([]);
-  
+
   useEffect(() => {
     readCat();
   }, []);
 
   const readCat = () => {
-    fetch("https://cat-tinder-z8s3.onrender.com/cats")
+    fetch("http://jeremyduncan.asuscomm.com:6339/cats")
       .then((response) => response.json())
       .then((payload) => {
         setCats(payload);
@@ -27,7 +27,7 @@ const App = () => {
   };
 
   const createCat = (cat) => {
-    fetch("https://cat-tinder-z8s3.onrender.com/cats", {
+    fetch("http://jeremyduncan.asuscomm.com:6339/cats", {
       // converts the object to a string that can be passed in the request
       body: JSON.stringify(cat),
       // specify the info being sent in JSON and the info returning should be JSON
@@ -43,7 +43,7 @@ const App = () => {
   };
 
   const updateCat = (cat, id) => {
-    fetch(`https://cat-tinder-z8s3.onrender.com/cats/${id}`, {
+    fetch(`http://jeremyduncan.asuscomm.com:6339/cats/${id}`, {
       // converting an object to a string
       body: JSON.stringify(cat),
       // specify the info being sent in JSON and the info returning should be JSON
@@ -61,7 +61,7 @@ const App = () => {
   };
 
   const deleteCat = (id) => {
-    fetch(`https://cat-tinder-z8s3.onrender.com/cats/${id}`, {
+    fetch(`http://jeremyduncan.asuscomm.com:6339/cats/${id}`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -80,7 +80,7 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route
             path="/catindex"
-            element={<CatIndex cats={cats} readCat={readCat}/>}
+            element={<CatIndex cats={cats} readCat={readCat} />}
           />
           <Route
             path="/catshow/:id"
